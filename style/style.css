@@ -147,9 +147,6 @@ header ul li a:hover {
   text-decoration: none;
   font-size: larger;
   color: var(--text-main);
-  border: none;
-  background-color: inherit;
-  appearance: none;
 }
 
 @media (max-width: 600px) {
