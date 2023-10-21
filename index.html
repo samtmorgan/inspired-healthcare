@@ -20,9 +20,20 @@
     <!-- twitter card metadata -->
     <meta name="twitter:title" content="Inspired Healthcare" />
     <!-- end witter card metadata -->
-
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style/styles.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      <link
+      rel="icon"
+      href="assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="canonical" href="https://inspired-healthcare.co.uk/home/" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- <script src="js.scripts.js" defer></script> -->
     <!-- <script src="components/header.js" type="text/javascript" defer></script> -->
     <script src="components/footer.js" type="text/javascript" defer></script>
@@ -34,8 +45,8 @@
   </head>
   <body>
     <header>
-      <div class="headerBrandWrapper">
-        <a class="navbar-brand" href="index.html">
+      <div class="header-brand-wrapper">
+        <a href="index.html">
           <img
             width="40px"
             alt="Blue Inspired Healthcare logo"
@@ -45,24 +56,45 @@
 
         <h1>Inspired Healthcare</h1>
       </div>
-
-      <nav>
-        <ul>
-          <div class="navListWrapper">
-            <li><a class="underline" href="index.html">Home</a></li>
-            <li><a class="underline" href="team.html">Our team</a></li>
-            <li><a class="underline" href="#">Services</a></li>
-            <li><a class="underline" href="#">Contact</a></li>
-          </div>
-        </ul>
-      </nav>
+      <ul id="navList" class="nav-list-wrapper">
+        <li><a class="underline" href="index.html">Home</a></li>
+        <li><a class="underline" href="team.html">Our team</a></li>
+        <li><a class="underline" href="#">Services</a></li>
+        <li><a class="underline" href="#">Contact</a></li>
+      </ul>
+      <a href="javascript:void(0);" class="burger" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </header>
     <main>
       <section>
         <h2>Home 👋</h2>
       </section>
+      <section class="section-block">
+        <h2>Hero Statement 🦸‍♀️</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
     </main>
 
     <footer-component></footer-component>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("navList");
+        console.log(x);
+        if (x.className === "nav-list-wrapper") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav-list-wrapper";
+        }
+      }
+    </script>
   </body>
 </html>
