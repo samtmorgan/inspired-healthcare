@@ -142,7 +142,7 @@ header ul li a:hover {
   background-color: #999;
 } */
 
-.burger {
+.responsive-nav-menu {
   display: none;
   text-decoration: none;
   font-size: larger;
@@ -150,7 +150,7 @@ header ul li a:hover {
 }
 
 @media (max-width: 600px) {
-  .burger {
+  .responsive-nav-menu {
     float: right;
     display: flex;
     margin-right: 2rem;
@@ -174,21 +174,32 @@ header ul li a:hover {
   }
 
   header ul li {
-    height: 4rem;
-    position: relative;
-    width: 100vw;
+    /* height: 4rem; */
+    /* position: relative; */
+    /* width: 100vw; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 4rem;
+    width: 100vw;
   }
 
   header ul li a {
-    margin: 0;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 100vw;
   }
 
   header ul li:hover {
     background-color: var(--main-light);
+  }
+
+  .underline {
+    display: flex;
+  }
+
+  .underline::after {
+    display: none;
   }
 
   header {
