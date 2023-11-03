@@ -21,12 +21,13 @@
     <meta name="twitter:title" content="Inspired Healthcare" />
     <!-- end witter card metadata -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
     <link rel="canonical" href="https://inspired-healthcare.co.uk/home/" />
     <link rel="stylesheet" href="style/style.css" />
     <link
+      href="https://fonts.googleapis.com/css?family=Lato"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- <script src="js.scripts.js" defer></script> -->
     <!-- <script src="components/header.js" type="text/javascript" defer></script> -->
@@ -38,8 +39,7 @@
     <title>Inspired Healthcare</title>
   </head>
   <body>
-    <!-- <header-component></header-component> -->
-    <header>
+    <header class="header">
       <div class="header-brand-wrapper">
         <a href="index.html">
           <img
@@ -54,13 +54,24 @@
       <ul id="navList" class="nav-list-wrapper">
         <li><a class="underline" href="index.html">Home</a></li>
         <li><a class="underline" href="team.html">Our team</a></li>
-        <li><a class="underline" href="#">Services</a></li>
+        <li><a class="underline" href="services.html">Services</a></li>
         <li><a class="underline" href="#">Contact</a></li>
       </ul>
-      <span class="responsive-nav-menu" onclick="openResponsiveNav()">
-        <i class="fa fa-bars"></i>
-      </span>
     </header>
+    <input type="checkbox" class="opensidebar-menu" id="opensidebar-menu" />
+    <label for="opensidebar-menu" class="sidebar-icon-toggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <aside id="sidebar-menu">
+      <ul class="sidebar-menu-inner">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Our team</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </aside>
     <main>
       <section>
         <h2>Team 👭👬</h2>
@@ -68,15 +79,5 @@
     </main>
 
     <footer-component></footer-component>
-    <script>
-      function openResponsiveNav() {
-        var navList = document.getElementById("navList");
-        if (navList.className === "nav-list-wrapper") {
-          navList.className += " responsive";
-        } else {
-          navList.className = "nav-list-wrapper";
-        }
-      }
-    </script>
   </body>
 </html>
